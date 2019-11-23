@@ -1,3 +1,7 @@
+.container {
+    margin-top: 20px;
+}
+
 .cover-image {
     width: 150px;
     height: 200px;
@@ -16,9 +20,6 @@
 
 .cover {
     width: 160px;
-}
-
-.search {
 }
 
 .preis {
