@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/warenkorb.css">
 
   <title>Book Shop</title>
 </head>
@@ -34,26 +34,64 @@
     </ul>
   </div>
 </nav>
-  <h1>Hello, Maria!</h1>
 
-<div id="accordion">
+<div id="accordion" class="container">
   <div class="card">
     <div class="card-header" id="headingOne">
       <h5 class="mb-0">
         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
+          <span>The Alchemist</span>
         </button>
       </h5>
     </div>
 
     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <table class="table table-borderless book-layout">
+      <tr>
+        <td width="15%">
       <div class="card-body">
-        text
-        <button type="button" class="btn btn-success float-right">Kaufen</button>
-      </br>
-      </br>
-        <button type="button" class="btn btn-danger float-right">Entfernen</button>
+        <img class="cover-image float-left"
+            src="https://prodimage.images-bn.com/pimages/9780062315007_p0_v2_s600x595.jpg"
+            alt="cover">
+        </td>
+        <td>
+        </br>
+        <ul class="description-list float-left">
+          <li>
+            Autor: <span>Paulo Coelho</span>
+          </li>
+          <li>
+            Verlag: <span>HarperCollins Publishers</span>
+          </li>
+          <li>
+            Auflage: <span>25th Anniversary Edition</span>
+          </li>
+          <li>
+            Sprache: <span>English</span>
+          </li>
+          <li>
+            Seiten: <span>208</span>
+          </li>
+          <li>
+            ISBN: <span>13-9780062315007</span>
+          </li>
+        </ul>
+        </td>
+        </tr>
+        <tr>
+          <td >
+              <form>
+                  <div class="form-group ">
+                      <input type="text" class="input_quantity" name="pin" maxlength="4" size="16" placeholder="Choose Quantity">
+                  </div>
+              </form>
+          </td>
+          <td>
+          <button type="button" class="btn btn-danger button_delete">Entfernen</button>  
+          </td>
+        </tr>
       </div>
+      </table>
     </div>
   </div>
   <div class="card">
@@ -68,7 +106,6 @@
       <div class="card-body">
         Text
         <button type="button" class="btn btn-danger float-right">Entfernen</button>
-        <button type="button" class="btn btn-success float-right">Kaufen</button>
       </div>
     </div>
   </div>
@@ -84,7 +121,6 @@
       <div class="card-body">
           text
           <button type="button" class="btn btn-danger float-right">Entfernen</button>
-          <button type="button" class="btn btn-success float-right">Kaufen</button>
       </div>
     </div>
   </div>
