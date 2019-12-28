@@ -22,3 +22,10 @@
 .input_quantity {
     margin-left: 20px;
 }
+
+
+.preis {
+    color: green;
+    font-weight: bold;
+    margin-right: 5px;
+}
