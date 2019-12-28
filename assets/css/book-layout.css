@@ -2,6 +2,13 @@
     margin-top: 20px;
 }
 
+.img-height {
+    height: 350px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .cover-image {
     width: 150px;
     height: 200px;
@@ -53,9 +60,9 @@
 
 .has-search .form-control {
     padding-left: 2.375rem;
-}
-
-.has-search .form-control-feedback {
+  }
+  
+  .has-search .form-control-feedback {
     position: absolute;
     z-index: 2;
     display: block;
@@ -65,4 +72,4 @@
     text-align: center;
     pointer-events: none;
     color: #aaa;
-}
+  }
