@@ -13,6 +13,7 @@ body {
     margin-bottom: 5%;
     width: 80%;
     box-shadow: 0 0 30px;
+    border-radius: 10px;
 }
 
 .contact-form .form-control {
