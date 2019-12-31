@@ -18,21 +18,21 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Book Shop</a>
+        <a class="navbar-brand" href="./book-layout.html">Bilingua</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./book-layout.html">Katalog <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./warenkorb.html">Warenkorb</a>
+                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="book-layout.html">Katalog <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Warenkorb</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Kontakt</a>
+                    <a class="nav-link" href="./kontakt.html">Kontakt</a>
                 </li>
             </ul>
         </div>
@@ -48,24 +48,25 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" name="txtName" class="form-control" placeholder="Name *" value="" required/>
+                        <input type="text" name="txtName" class="form-control" placeholder="Name *" value="" required />
                     </div>
                     <div class="form-group">
-                        <input type="email" name="txtEmail" class="form-control" placeholder="E-Mail*" value="" required />
+                        <input type="email" name="txtEmail" class="form-control" placeholder="E-Mail*" value=""
+                            required />
                     </div>
                     <div class="form-group">
-                        <input type="text" name="txtPhone" class="form-control" placeholder="Telefonnummer *"
-                            value="" required />
+                        <input type="text" name="txtPhone" class="form-control" placeholder="Telefonnummer *" value=""
+                            required />
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-primary">Senden</button>  
+                        <button type="button" class="btn btn-primary">Senden</button>
                     </div>
-                   
+
                     <div class=form-group>
-                    
+
                         <i class="fa fa-phone"></i>
                         +49 123 232 2323
-                              
+
                     </div>
 
                 </div>
@@ -74,12 +75,14 @@
                         <textarea name="txtMsg" class="form-control" placeholder="Ihre Nachricht *"
                             style="width: 100%; height: 100px;" required></textarea>
                     </div>
-                
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9796.95425081681!2d11.6383659!3d52.1299818!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc8917c7a166600a0!2sAllee%20Center%20Magdeburg!5e0!3m2!1str!2sde!4v1575888716559!5m2!1str!2sde" width="100%" height="200px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2449.2385638177884!2d11.636177215681567!3d52.129981779742174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47af5f57b935501b%3A0xc8917c7a166600a0!2sAllee%20Center%20Magdeburg!5e0!3m2!1sen!2sbg!4v1577750893921!5m2!1sen!2sbg"
+                        width="100%" height="200px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
                 </div>
 
-                
+
             </div>
         </form>
     </div>
@@ -95,7 +98,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-       
+
 </body>
 
 </html>

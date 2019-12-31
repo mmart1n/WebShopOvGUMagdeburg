@@ -1,0 +1,34 @@
+.button_delete {
+    float: right;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.cover-image {
+    width: 150px;
+    height: 200px;
+    border: 0;
+}
+
+.description-list {
+    padding-left: 0;
+    margin-left: 20px;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.input_quantity {
+    margin-left: 20px;
+}
+
+.preis-menge-left {
+    width: 100%;
+    text-align: left;
+}
+
+.preis {
+    color: green;
+    font-weight: bold;
+}

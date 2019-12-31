@@ -9,6 +9,12 @@
     background-size: cover;
 }
 
+@media screen and (max-width: 991px) {
+    .img-height {
+        height: 230px;
+    }
+  }
+
 .cover-image {
     width: 150px;
     height: 200px;
