@@ -1,81 +1,81 @@
 .container {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .img-height {
-    height: 350px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 350px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media screen and (max-width: 991px) {
-    .img-height {
-        height: 230px;
-    }
+  .img-height {
+    height: 230px;
   }
+}
 
 .cover-image {
-    width: 150px;
-    height: 200px;
-    border: 0;
+  width: 150px;
+  height: 200px;
+  border: 0;
 }
 
 .book-layout {
-    font-size: 12px;
-    line-height: 1.2;
-    border-radius: 5px;
+  font-size: 12px;
+  line-height: 1.2;
+  border-radius: 5px;
 }
 
 .menge {
-    line-height: 36px;
+  line-height: 36px;
 }
 
 .cover {
-    width: 160px;
+  width: 160px;
 }
 
 .preis {
-    color: green;
-    font-weight: bold;
-    float: right;
-    margin-right: 5px;
+  color: green;
+  font-weight: bold;
+  float: right;
+  margin-right: 5px;
 }
 
 .buy-button {
-    float: right;
-    margin-right: 5px;
+  float: right;
+  margin-right: 5px;
 }
 
 .description {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .description-list {
-    padding-left: 0;
-    margin-left: 20px;
-    line-height: 2;
+  padding-left: 0;
+  margin-left: 20px;
+  line-height: 2;
 }
 
 .kaufen {
-    height: 36px;
-    line-height: 12px;
-    font-size: 12px;
-    font-weight: bold;
+  height: 36px;
+  line-height: 12px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .has-search .form-control {
-    padding-left: 2.375rem;
-  }
-  
-  .has-search .form-control-feedback {
-    position: absolute;
-    z-index: 2;
-    display: block;
-    width: 2.375rem;
-    height: 2.375rem;
-    line-height: 2.375rem;
-    text-align: center;
-    pointer-events: none;
-    color: #aaa;
-  }
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}

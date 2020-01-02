@@ -1,34 +1,57 @@
 .button_delete {
-    float: right;
+  float: right;
 }
 
 .container {
-    margin-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 52px;
 }
 
 .cover-image {
-    width: 150px;
-    height: 200px;
-    border: 0;
+  width: 150px;
+  height: 200px;
+  border: 0;
 }
 
 .description-list {
-    padding-left: 0;
-    margin-left: 20px;
-    line-height: 2;
-    font-size: 14px;
+  padding-left: 0;
+  margin-left: 20px;
+  line-height: 2;
+  font-size: 14px;
 }
 
 .input_quantity {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .preis-menge-left {
-    width: 100%;
-    text-align: left;
+  width: 100%;
+  text-align: left;
 }
 
 .preis {
-    color: green;
-    font-weight: bold;
+  color: green;
+  font-weight: bold;
+}
+
+.singleAcordion {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+  border-radius: 0.25rem !important;
+}
+
+.img-height {
+  height: 350px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 991px) {
+  .img-height {
+    height: 230px;
+  }
+}
+
+.alert {
+  display: flex;
 }
