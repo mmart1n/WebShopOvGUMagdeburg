@@ -18,7 +18,7 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="./book-layout.html">Bilingua</a>
+    <a class="navbar-brand" href="./catalog.html">Bilingua</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -26,7 +26,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="./book-layout.html">Katalog <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="./catalog.html">Katalog <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="./warenkorb.html">Warenkorb</a>
@@ -70,7 +70,7 @@
     </div>
     <div class="preis" style="margin-top: 20px;">
       <button type="button" class="btn float-left disabled" style="cursor: default; padding-left: 0px;">Gesamtpreis
-        <span>26.00</span>€</button>
+        <span id="gesamtPreis">26.00</span>€</button>
       <button type="button" id="kaufen" class="btn btn-success float-right" style="margin-left: 5px;">Kaufen</button>
       <button type="button" id="emptyWarenkorb" class="btn btn-danger float-right">Warenkorb Löschen</button>
     </div>
@@ -171,7 +171,7 @@
           <h6 class="text-uppercase font-weight-bold">Useful links</h6>
           <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #21d192;">
           <p>
-            <a href="./book-layout.html" style="color: #21d192;">Katalog</a>
+            <a href="./catalog.html" style="color: #21d192;">Katalog</a>
           </p>
           <p>
             <a href="./warenkorb.html" style="color: #21d192;">Warenkorb</a>
@@ -207,7 +207,7 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center text-black-50 py-3" style="background-color: #454d55;">© 2018 Copyright:
-      <a href="./book-layout.html" style="color: #21d192;"> Bilingua</a>
+      <a href="./catalog.html" style="color: #21d192;"> Bilingua</a>
     </div>
     <!-- Copyright -->
 
@@ -225,30 +225,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="./warenkorb-layout.js"></script>
+  <script src="./assets/js/warenkorb.js"></script>
   <script>
-    let res = window.innerWidth;
-    if (res < 768) {
-      $('.preis-menge').removeClass('float-right');
-      $('.preis-menge').addClass('preis-menge-left');
-    } else {
-      $('.preis-menge').removeClass('preis-menge-left');
-      $('.preis-menge').addClass('float-right');
-    }
-
-    window.onresize = function () {
-      let res = window.innerWidth;
-      if (res < 768) {
-        $('.preis-menge').removeClass('float-right');
-        $('.preis-menge').addClass('preis-menge-left');
-      } else {
-        $('.preis-menge').removeClass('preis-menge-left');
-        $('.preis-menge').addClass('float-right');
-      }
-    };
-
     checkWarenkorb();
-
   </script>
 </body>
 
