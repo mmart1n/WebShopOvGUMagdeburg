@@ -22,7 +22,7 @@ let books = [
         "autor": "Eric Carle",
         "sprache": "Deutsch",
         "genre": "Kinder, Fantasy",
-        "verlag": "verlag Gerhard Stalling",
+        "verlag": "Gerhard Stalling",
         "auflage": "1.",
         "Typ": "Gebunden",
         "seiten": "26",
