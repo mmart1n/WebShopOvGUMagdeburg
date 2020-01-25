@@ -22,9 +22,6 @@
 }
 
 .preis {
-  color: #21d192;
-  font-weight: bold;
-  margin-top: 20px;
 }
 
 .kaufenBtn {
@@ -120,4 +117,36 @@
 
 #accordionExample {
   font-size: 13px;
+}
+
+.panel {
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,.125);
+}
+.infoTable {
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+}
+
+.infoParagraph {
+  margin-bottom: 0px;
+}
+
+.infoLieferung {
+  font-size: 13px;
+  color: gray;
+}
+
+.infoHeading {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 39px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.infoHeadingTd {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 0px !important;
 }

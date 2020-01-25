@@ -67,57 +67,98 @@
 
     <div class="container">
         <div id="notEmptyWarenkorb">
-            <div class="accordion" id="accordionExample">
-                <div class="card singleAcordion" id="bookContainer">
-                    <div class="card-header" id="heading1">
-                        <h5 class="mb-0"><button class="btn btn-link openItemBtn" data-toggle="collapse"
-                                data-target="#collapse" aria-expanded="true" aria-controls="collapse1"><span
-                                    class="titleContent">George</span></button><button
-                                class="preis-menge btn btn-link float-right disabled">Anzahl: <span
-                                    class="mengeContent">1</span>, Summe: <span
-                                    class="gesamtSumContent">13.00</span></button></h5>
-                    </div>
-                    <div id="collapse" class="collapse show itemBody" aria-labelledby="heading1"
-                        data-parent="#accordionExample">
-                        <div class="card-body">
-                            <table class="table table-borderless book-layout table-responsive cartTable">
-                                <tr>
-                                    <td width="15%"><img class="cover-image float-left"
-                                            src="https://prodimage.images-bn.com/pimages/9780062315007_p0_v2_s600x595.jpg"
-                                            alt="cover"></td>
-                                    <td>
-                                        <ul>
-                                            <li>Autor: <span class="autorContent">Paulo Coelho</span></li>
-                                            <li>Verlag: <span class="verlagContent">HarperCollins Publishers</span></li>
-                                            <li>Auflage: <span class="auflageContent">25th Anniversary Edition</span>
-                                            </li>
-                                            <li>Sprache: <span class="spracheContent">Englisch</span></li>
-                                            <li>Seiten: <span class="seitenContent">208</span></li>
-                                            <li>ISBN: <span class="isbnContent">13-9780062315007</span></li>
-                                            <li>Genre: <span class="genreContent">Fantasy</span></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><button class="btn float-left stuckPreisBtn disabled">Stückpreis: <span
-                                                class="preisContent">13.00</span></button>
-                                    </td>
-                                    <td><button class="btn btn-danger removeFromShoppingCartBtn ">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </button><input class="inputMenge" type="number" value="1" min="1" step="1">
-                                    </td>
-                                </tr>
-                            </table>
+            <div class="row cat-row">
+                <div class="col-lg-8">
+                    <div class="accordion" id="accordionExample" style="margin-bottom: 20px;">
+                        <div class="card singleAcordion" id="bookContainer">
+                            <div class="card-header" id="heading1">
+                                <h5 class="mb-0"><button class="btn btn-link openItemBtn" data-toggle="collapse"
+                                        data-target="#collapse" aria-expanded="true" aria-controls="collapse1"><span
+                                            class="titleContent">George</span></button><button
+                                        class="preis-menge btn btn-link float-right disabled">Anzahl: <span
+                                            class="mengeContent">1</span>, Summe: <span
+                                            class="gesamtSumContent">13.00</span></button></h5>
+                            </div>
+                            <div id="collapse" class="collapse show itemBody" aria-labelledby="heading1"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <table class="table table-borderless book-layout table-responsive cartTable">
+                                        <tr>
+                                            <td width="15%"><img class="cover-image float-left"
+                                                    src="https://prodimage.images-bn.com/pimages/9780062315007_p0_v2_s600x595.jpg"
+                                                    alt="cover"></td>
+                                            <td>
+                                                <ul>
+                                                    <li>Autor: <span class="autorContent">Paulo Coelho</span></li>
+                                                    <li>Verlag: <span class="verlagContent">HarperCollins
+                                                            Publishers</span>
+                                                    </li>
+                                                    <li>Auflage: <span class="auflageContent">25th Anniversary
+                                                            Edition</span>
+                                                    </li>
+                                                    <li>Sprache: <span class="spracheContent">Englisch</span></li>
+                                                    <li>Seiten: <span class="seitenContent">208</span></li>
+                                                    <li>ISBN: <span class="isbnContent">13-9780062315007</span></li>
+                                                    <li>Genre: <span class="genreContent">Fantasy</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><button class="btn float-left stuckPreisBtn disabled">Stückpreis: <span
+                                                        class="preisContent">13.00</span></button>
+                                            </td>
+                                            <td><button class="btn btn-danger removeFromShoppingCartBtn ">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button><input class="inputMenge" type="number" value="1" min="1"
+                                                    step="1">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-
-            </div>
-            <div class="preis">
-                <button type="button" class="btn float-left gesamtPreisBtn disabled">Gesamtpreis: <span
-                        id="gesamtPreis">26.00</span>€</button>
-                <button type="button" id="kaufen" class="btn btn-success float-right kaufenBtn">Kaufen</button>
-                <button type="button" id="warenkorbLeeren" class="btn btn-danger float-right">Warenkorb Leeren</button>
+                <div class="preis col-lg-4">
+                    <div class="panel">
+                        <table class="table infoTable">
+                            <tr style="height: 62px;">
+                                <td class="infoHeadingTd">
+                                    <p class="infoHeading">Items in Warenkorb: <span id="totalItemsContent">2</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="infoParagraph">Subtotal: <span id="subtotalContent">26.00</span>€</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="infoParagraph">Lieferung: <span id="lieferungContent">5.00</span>€</p>
+                                    <p class="infoParagraph infoLieferung">Kostenlose Lieferung ab 40.00€</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="infoParagraph">Gesamtpreis: <span id="gesamtPreisContent">10.00</span>€
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" id="kaufen" class="btn btn-success kaufenBtn">Kaufen</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" id="warenkorbLeeren" class="btn btn-danger">Warenkorb
+                                        Leeren</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="emptyWarenkorb" class="alert alert-danger" role="alert">

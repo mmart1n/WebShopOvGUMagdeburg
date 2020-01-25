@@ -75,9 +75,9 @@ class Paginator {
 
     initializeButtons() {
         if (this.booksToDisplay.length > 0) {
-            document.getElementsByClassName("pagination")[0].style.visibility = "visible";
+            document.getElementsByClassName("pagination")[0].style.display = "flex";
         } else {
-            document.getElementsByClassName("pagination")[0].style.visibility = "hidden";
+            document.getElementsByClassName("pagination")[0].style.display = "none";
             return;
         }
 
@@ -229,6 +229,9 @@ let buttonFunction = (id, mengeContent, addToShoppingCartBtn, indexInCatalog) =>
         }
         localStorage.setItem('booksInWarenkorb', JSON.stringify(booksInWarenkorb));
         sessionBooks = JSON.parse(localStorage.getItem("sessionBooks"));
+        let highlight = document.getElementsByClassName("highlight")[indexInCatalog];
+        highlight.classList.add("glow");
+        setTimeout(() => highlight.classList.remove("glow"), 1000);
     }
 };
 

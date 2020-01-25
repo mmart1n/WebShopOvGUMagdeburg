@@ -6,6 +6,7 @@ if (!localStorage.getItem("booksInWarenkorb") == []) {
   booksInWarenkorb = JSON.parse(localStorage.getItem("booksInWarenkorb"));
 }
 
+//Render single book cart
 function renderSingeBookCart(indexInCatalog, id, title, autor, verlag, auflage, sprache, seiten, isbn, genre, imgUrl, menge, preis) {
   let newBookContainer = bookContainer.cloneNode(true);
   newBookContainer.classList.remove("singleAcordion");
@@ -60,6 +61,7 @@ function renderSingeBookCart(indexInCatalog, id, title, autor, verlag, auflage, 
   removeItemBtn.addEventListener("click", buttonFunction(id, menge, indexInCatalog));
 }
 
+//Delete button functionality for every item
 let buttonFunction = (id, mengeContent, indexInCatalog) => {
   return () => {
     let removeQuantityInput = document.getElementsByClassName("inputMenge")[indexInCatalog];
@@ -88,8 +90,7 @@ let buttonFunction = (id, mengeContent, indexInCatalog) => {
   }
 };
 
-renderProductsInWarenkorb();
-
+//Render all items in Warenkorb
 function renderProductsInWarenkorb() {
   while (itemsContainer.firstChild) {
     itemsContainer.firstChild.remove();
@@ -99,15 +100,33 @@ function renderProductsInWarenkorb() {
     renderSingeBookCart(indexInAcordion, book.id, book.title, book.autor, book.verlag, book.auflage, book.sprache, book.seiten, book.ISBN, book.genre, book.imgUrl, book.menge, book.preis, book.preis);
     indexInAcordion++;
   }
-  let gesamtPreis = document.getElementById("gesamtPreis");
+  let subtotalContent = document.getElementById("subtotalContent");
+  let totalItemsContent = document.getElementById("totalItemsContent");
+  let lieferungContent = document.getElementById("lieferungContent");
+  let gesamtPreisContent =document.getElementById("gesamtPreisContent");
   let summe = 0;
+  let totalItemsValue = 0;
+  let lieferungValue = 5;
+  let gesamtPreis = 0;
   for (const book of booksInWarenkorb) {
     summe += book.preis * book.menge;
+    totalItemsValue += book.menge;
   }
-  gesamtPreis.textContent = summe.toFixed(2);
+  gesamtPreis = summe + 5;
+  subtotalContent.textContent = summe.toFixed(2);
+  if(summe >= 40){
+    lieferungValue = 0;
+    gesamtPreis -= 5;
+  }
+  totalItemsContent.textContent = totalItemsValue.toFixed(0);
+  lieferungContent.textContent = lieferungValue.toFixed(2);
+  gesamtPreisContent.textContent = gesamtPreis.toFixed(2);
   checkWarenkorb();
 }
 
+renderProductsInWarenkorb();
+
+//Check if warenkorb is empty
 function checkWarenkorb() {
   let products = document.querySelectorAll(".card");
   if (products.length == 0) {
@@ -115,10 +134,10 @@ function checkWarenkorb() {
     document.getElementById("notEmptyWarenkorb").style.display = "none";
   } else if (products.length == 1) {
     products[0].classList.add("singleAcordion");
-    document.getElementById("emptyWarenkorb").style.visibility = "hidden";
+    document.getElementById("emptyWarenkorb").style.display = "none";
   } else {
     products[0].classList.remove("singleAcordion");
-    document.getElementById("emptyWarenkorb").style.visibility = "hidden";
+    document.getElementById("emptyWarenkorb").style.display = "none";
   }
 
   let res = window.innerWidth;
@@ -142,6 +161,7 @@ function checkWarenkorb() {
   };
 }
 
+//Kaufen button functionality
 let kaufen = document.getElementById("kaufen");
 kaufen.addEventListener("click", () => {
   alert("Sie haben die Bücher erfolgreich gekauft!")
@@ -150,6 +170,7 @@ kaufen.addEventListener("click", () => {
   location.reload();
 });
 
+//Warenkorbleeren functionality
 let emptyWarenkorb = document.getElementById("warenkorbLeeren");
 emptyWarenkorb.addEventListener("click", () => {
   alert("Sie haben den Warenkorb geleert!")
