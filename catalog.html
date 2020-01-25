@@ -73,7 +73,7 @@
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
                                 aria-expanded="true" aria-controls="collapseOne">
-                                Search
+                                Suchen
                             </button>
                         </h2>
                     </div>
@@ -82,7 +82,7 @@
                         <div class="card-body">
                             <!-- Actual search box -->
                             <div class="input-group">
-                                <input type="text" id="search" class="form-control" placeholder="Title or autor">
+                                <input type="text" id="search" class="form-control" placeholder="Titel oder Autor">
                                 <div class="input-group-append">
                                     <button class="btn btn-secondary" type="button">
                                         <i class="fas fa-search"></i>
@@ -96,7 +96,51 @@
             </div>
 
             <div class="col-lg-9 col-sm-12 catalog">
-                <!-- Render the books -->
+                <div class="row cat-row" id="catalogContainer">
+                    <div class="col-sm-12 col-xl-6" id="bookContainer">
+                        <table class="table table-borderless table-dark book-layout">
+                            <tr>
+                                <td colspan="3">
+                                    <h6><span class="titleContent">The
+                                            Alchemist</span></h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1" class="cover"><img class="cover-image" alt="cover"
+                                        src="https://prodimage.images-bn.com/pimages/9780062315007_p0_v2_s600x595.jpg">
+                                </td>
+                                <td colspan="2" class="description">
+                                    <ul class="description-list">
+                                        <li>Autor: <span class="autorContent">Paulo Coelho</span></li>
+                                        <li>Verlag: <span class="verlagContent">HarperCollins Publishers</span></li>
+                                        <li>Auflage: <span class="auflageContent">25th Anniversary Edition</span></li>
+                                        <li>Sprache: <span class="spracheContent">Englisch</span></li>
+                                        <li>Seiten: <span class="seitenContent">208</span></li>
+                                        <li>ISBN: <span class="isbnContent">13-9780062315007</span></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Genre: <span class="genreContent">Adventure, Fantasy</span></td>
+                                <td colspan="1" class="preis">
+                                    <p>Preis: <span class="preisContent">13.00€</span></p>
+                                </td>
+                            </tr>
+                            <tr class="menge">
+                                <td colspan="2">
+                                    <p>Quantität: <span class="mengeContent">30</span></p>
+                                </td>
+
+                                <td colspan="1" class="buy-button">
+                                    <input class="inputMenge" type="number" value="1" min="1" step="1"><button
+                                        class="addToShoppingCartButton btn btn-success">
+                                        <i class="fas fa-cart-arrow-down"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
         <nav aria-label="Page navigation example">
@@ -157,26 +201,26 @@
         </div>
 
         <!-- Footer Links -->
-        <div class="container text-center text-md-left mt-5">
+        <div class="container text-center text-lg-left mt-5">
 
             <!-- Grid row -->
             <div class="row mt-3" style="color: gray;">
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+                <div class="col-md-12 col-lg-4 col-xl-3 mb-4">
 
                     <!-- Content -->
                     <h6 class="text-uppercase font-weight-bold">Bilingua</h6>
                     <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
                         style="width: 60px; background-color: #21d192;">
-                    <p>A Workshop which has been created by Martin, Florian, Maria, Mari and Simona. This is our
-                        Wirtschaftsinformatik's course project.</p>
+                    <p>Diese Webseite wurde von Martin, Florian, Maria, Merve und Simona für das
+                        Wirtschaftsinformatikkurs hergestellt.</p>
 
                 </div>
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <div class="col-md-12 col-lg-2 col-xl-2 mx-auto mb-4">
 
                     <!-- Links -->
                     <h6 class="text-uppercase font-weight-bold">Resources</h6>
@@ -195,7 +239,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <div class="col-md-12 col-lg-2 col-xl-2 mx-auto mb-4">
 
                     <!-- Links -->
                     <h6 class="text-uppercase font-weight-bold">Useful links</h6>
@@ -215,7 +259,7 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <div class="col-md-12 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                     <!-- Links -->
                     <h6 class="text-uppercase font-weight-bold">Contact</h6>
@@ -238,7 +282,7 @@
         <!-- Footer Links -->
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center text-black-50 py-3" style="background-color: #454d55;">© 2018
+        <div class="footer-copyright text-center text-black-50 py-3" style="background-color: #454d55;">© 2020
             Copyright:
             <a href="./catalog.html" style="color: #21d192;"> Bilingua</a>
         </div>

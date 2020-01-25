@@ -2,6 +2,21 @@ let localStorage = window.localStorage;
 
 let books = [
     {
+        "id": 0,
+        "title": "Nächte, in denen Sturm aufzieht",
+        "autor": "Jojo Moyes",
+        "sprache": "Deutsch",
+        "genre": "Roman",
+        "verlag": "Rowolth Polaris",
+        "auflage": "8.",
+        "Typ": "Kartoniert",
+        "seiten": "480",
+        "preis": 16.99,
+        "ISBN": "13-9783499276392, 10-3499276399",
+        "menge": 98,
+        "imgUrl": "https://media.hugendubel.de/shop/coverscans/342/34208525_9783499276392_xl.jpg"
+    },
+    {
         "id": 1,
         "title": "The Alchemist",
         "autor": "Paulo Coelho",
@@ -420,27 +435,12 @@ let books = [
         "ISBN": "13-9783805250023, 10-3805250029",
         "menge": 65,
         "imgUrl": "https://media.hugendubel.de/shop/coverscans/342/34200336_9783805250023_xl.jpg"
-    },
-    {
-        "id": 29,
-        "title": "Nächte, in denen Sturm aufzieht",
-        "autor": "Jojo Moyes",
-        "sprache": "Deutsch",
-        "genre": "Roman",
-        "verlag": "Rowolth Polaris",
-        "auflage": "8.",
-        "Typ": "Kartoniert",
-        "seiten": "480",
-        "preis": 16.99,
-        "ISBN": "13-9783499276392, 10-3499276399",
-        "menge": 98,
-        "imgUrl": "https://media.hugendubel.de/shop/coverscans/342/34208525_9783499276392_xl.jpg"
     }
 ];
 
 localStorage.setItem('sessionBooks', JSON.stringify(books.slice()));
 localStorage.setItem('booksInWarenkorb', []);
 
-window.onload = () => {
+window.onload = new function() {
     window.location.replace("./catalog.html");
 };
