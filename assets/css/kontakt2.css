@@ -1,0 +1,16 @@
+.container {
+  margin-top: 20px;
+}
+
+.img-height {
+  height: 350px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 991px) {
+  .img-height {
+    height: 230px;
+  }
+}
