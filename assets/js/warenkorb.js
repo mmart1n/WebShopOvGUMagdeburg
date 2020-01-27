@@ -67,7 +67,7 @@ let buttonFunction = (id, mengeContent, indexInCatalog) => {
     let removeQuantityInput = document.getElementsByClassName("inputMenge")[indexInCatalog];
     let quantity = Number.parseInt(removeQuantityInput.value);
     if (quantity <= 0 || quantity > mengeContent) {
-      window.alert("Invalid amount!");
+      window.alert("Ungültige Anzahl eingegeben!");
       removeQuantityInput.value = 1;
       return;
     }

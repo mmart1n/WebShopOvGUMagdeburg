@@ -51,7 +51,7 @@ class Paginator {
             let noBooks = document.createElement("div");
             noBooks.classList.add("alert", "alert-danger");
             noBooks.setAttribute("role", "alert");
-            noBooks.textContent = "No books found!"
+            noBooks.textContent = "Kein passenden Ergebnisse gefunden!"
             catalogContainer.appendChild(noBooks);
             catalogContainer.classList.remove("row");
         } else {
@@ -93,7 +93,7 @@ class Paginator {
         let previousButton = document.createElement("button");
         previousButton.classList.add("page-link");
         previousButton.setAttribute("tabindex", -1);
-        previousButton.textContent = "Back";
+        previousButton.textContent = "Zurück";
         previousButtonList.appendChild(previousButton);
 
         let nextButtonList = document.getElementById("next");
@@ -105,7 +105,7 @@ class Paginator {
         }
         let nextButton = document.createElement("button");
         nextButton.classList.add("page-link");
-        nextButton.textContent = "Next";
+        nextButton.textContent = "Weiter";
         nextButtonList.appendChild(nextButton);
 
         let currentPageList = document.getElementById("currentPage");
@@ -199,8 +199,13 @@ let buttonFunction = (id, mengeContent, addToShoppingCartBtn, indexInCatalog) =>
     return () => {
         let mengeZuAddieren = document.getElementsByClassName("inputMenge")[indexInCatalog];
         let quantity = Number.parseInt(mengeZuAddieren.value);
-        if (quantity <= 0 || quantity > sessionBooks[id].menge) {
-            window.alert("Invalid amount!");
+        if (quantity <= 0) {
+            window.alert("Ungültige Anzahl eingegeben!");
+            mengeZuAddieren.value = 1;
+            return;
+        }
+        if (quantity > sessionBooks[id].menge) {
+            window.alert("Nicht genug Bücher auf Lager. Bitte kontaktieren Sie uns!");
             mengeZuAddieren.value = 1;
             return;
         }

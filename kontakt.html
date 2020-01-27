@@ -6,14 +6,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/kontakt.css">
-
-    <title>Bilingua Kontakt</title>
+    <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/css/mdb.min.css">
+    <link rel="stylesheet" href="./assets/css/kontakt2.css">
+    <title>Bilingua</title>
 </head>
 
 <body>
@@ -39,50 +38,266 @@
         </div>
     </nav>
 
-    <div class="container contact-form">
-        <!--<div class="contact-image">
-            <img src="https://timedotcom.files.wordpress.com/2015/06/521811839-copy.jpg" alt="rocket_contact" />
-        </div>-->
-        <form method="post">
-            <h3>
-                Schreiben Sie uns eine Nachricht</h3>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100 img-height" src="assets/img/Logobooks.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 img-height" src="assets/img/lesen ist schön.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 img-height" src="assets/img/macht spaß.jpg" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="container">
+        <!--Section: Contact v.2-->
+        <section class="mb-4">
+
+            <!--Section heading-->
+            <h2 class="h1-responsive font-weight-bold text-center my-4">Schreiben Sie uns eine Nachricht</h2>
+            <!--Section description-->
+            <p class="text-center w-responsive mx-auto mb-5">Bei Fragen oder Anmerkungen zögern Sie nicht uns direkt zu
+                kontaktieren. Unser Team wird versuchen Ihnen so schnell wie möglich zu helfen.</p>
+
             <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" name="txtName" class="form-control" placeholder="Name *" value="" required />
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="txtEmail" class="form-control" placeholder="E-Mail*" value=""
-                            required />
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="txtPhone" class="form-control" placeholder="Telefonnummer *" value=""
-                            required />
-                    </div>
-                    <div class="form-group">
-                        <button type="button" class="btn btn-primary">Senden</button>
-                    </div>
 
-                    <div class=form-group>
+                <!--Grid column-->
+                <div class="col-md-7 mb-md-0 mb-5">
+                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
 
-                        <i class="fa fa-phone"></i>
-                        +49 123 232 2323
+                        <!--Grid row-->
+                        <div class="row">
 
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="name" name="name" class="form-control">
+                                    <label for="name" class="">Name</label>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="email" name="email" class="form-control">
+                                    <label for="email" class="">Email</label>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <input type="text" id="subject" name="subject" class="form-control">
+                                    <label for="subject" class="">Betreff</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid row-->
+
+                        <!--Grid row-->
+                        <div class="row">
+
+                            <!--Grid column-->
+                            <div class="col-md-12">
+
+                                <div class="md-form">
+                                    <textarea type="text" id="message" name="message" rows="9"
+                                        class="form-control md-textarea"></textarea>
+                                    <label for="message">Ihre Nachricht</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--Grid row-->
+
+                    </form>
+
+                    <div class="text-center text-md-left">
+                        <a class="btn btn-primary" onclick="">Senden</a>
                     </div>
+                    <div class="status"></div>
                 </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <textarea name="txtMsg" class="form-control" placeholder="Ihre Nachricht *"
-                            style="width: 100%; height: 100px;" required></textarea>
-                    </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-5 text-left">
+                    <p><i class="fas fa-home mr-3"></i>Allee Center Magdeburg</p>
+                    <p>39104 Magdeburg, Germany</p>
+                    <p><i class="fas fa-envelope mr-3"></i>info@example.com</p>
+                    <p><i class="fa fa-phone mr-3"></i>+49 123 232 2323</p>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2449.2385638177884!2d11.636177215681567!3d52.129981779742174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47af5f57b935501b%3A0xc8917c7a166600a0!2sAllee%20Center%20Magdeburg!5e0!3m2!1sen!2sbg!4v1577750893921!5m2!1sen!2sbg"
-                        width="100%" height="200px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        width="100%" height="300px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
                 </div>
+                <!--Grid column-->
+
             </div>
-        </form>
+
+        </section>
+        <!--Section: Contact v.2-->
     </div>
+
+    <!-- Footer -->
+    <footer class="page-footer" style="background-color: #eceff1;">
+
+        <div style="background-color: #21d192;">
+            <div class="container">
+
+                <!-- Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0">Get connected with us on social networks!</h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f mr-4"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter mr-4"> </i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g mr-4"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in mr-4"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram"> </i>
+                        </a>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row-->
+
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="container text-center text-lg-left mt-5">
+
+            <!-- Grid row -->
+            <div class="row mt-3" style="color: gray;">
+
+                <!-- Grid column -->
+                <div class="col-md-12 col-lg-4 col-xl-3 mb-4">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase font-weight-bold">Über uns</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #21d192;">
+                    <p>Diese Webseite wurde von Martin, Florian, Maria, Merve und Simona für den
+                        Wirtschaftsinformatikkurs hergestellt.</p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-12 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Ressourcen</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #21d192;">
+                    <p>
+                        <a href="https://getbootstrap.com/" style="color: #21d192;">Bootstap</a>
+                    </p>
+                    <p>
+                        <a href="https://fontawesome.com/" style="color: #21d192;">Font Awesome</a>
+                    </p>
+                    <p>
+                        <a href="https://mdbootstrap.com/" style="color: #21d192;">MDBootstrap</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-12 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Navigation</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #21d192;">
+                    <p>
+                        <a href="./catalog.html" style="color: #21d192;">Katalog</a>
+                    </p>
+                    <p>
+                        <a href="./warenkorb.html" style="color: #21d192;">Warenkorb</a>
+                    </p>
+                    <p>
+                        <a href="./kontakt.html" style="color: #21d192;">Kontakt</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-12 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Kontakt</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto"
+                        style="width: 60px; background-color: #21d192;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i>Allee Center Magdeburg</p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i>info@example.com</p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i>+49 123 232 2323</p>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center text-black-50 py-3" style="background-color: #454d55;">© 2020
+            Copyright:
+            <a href="./catalog.html" style="color: #21d192;"> Bilingua</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -95,7 +310,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
+    <script src="https://kit.fontawesome.com/a91daa268b.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/forms-free.js"></script>
 </body>
 
 </html>
