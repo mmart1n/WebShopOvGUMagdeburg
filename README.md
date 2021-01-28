@@ -1,5 +1,5 @@
 # WebShopOvGUMagdeburg
-A WebSite created as a course assignment for business informatics.
+A WebSite created for a course assignment in business informatics.
 
 ### Requirements
 
